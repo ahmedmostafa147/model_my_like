@@ -12,8 +12,7 @@ app = FastAPI()
 selected_columns = ['Title', 'Tag', 'Review', 'Comment', 'Country', 'Price', 'Rating', 'tags', 'img_link']
 
 # Ensure the CSV file contains the 'img_link' column, or add it if missing
-df = pd.read_csv("https://raw.githubusercontent.com/ahmedmostafa147/BackEnd/main/final_data.csv")
-
+df = pd.read_csv(r"C:\Users\HP\Downloads\projec_2024\Final model\updated_data_with_img.csv")
 for col in selected_columns:
     if col not in df.columns:
         df[col] = None
@@ -88,4 +87,4 @@ def evaluate_performance(recommendations, actual_data, threshold=0.5):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="1.1.1.1", port=800)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
