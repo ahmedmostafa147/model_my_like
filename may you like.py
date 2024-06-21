@@ -87,4 +87,4 @@ def evaluate_performance(recommendations, actual_data, threshold=0.5):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="1.1.1.1", port=800)
